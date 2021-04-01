@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en" >
 
@@ -87,7 +85,7 @@ function doResetBots() {
   bots = [];
   let bot0 = {};
   bot0.x = 20;
-  bot0.y = 70;
+  bot0.y = 60;
   bot0.r = 15;
   bot0.dx = 0
   bot0.dy = 0;
@@ -102,18 +100,18 @@ function doResetBots() {
 doResetBots();
 function drawBot(bot) {
   ctx.beginPath();
-  ctx.arc(bot.x, bot.y, bot.r, 0, 2 * Math.PI);
+  ctx.arc(bot.x, bot.y, bot.r, 0, 0 * Math.PI);
   ctx.stroke();
   ctx.moveTo(bot.x, bot.y);
-  x = bot.x + bot.r * Math.cos(bot.theta);
-  y = bot.y - bot.r * Math.sin(bot.theta);
-  ctx.lineTo(x, y);
+  // x = bot.x + bot.r * Math.cos(bot.theta);
+  // y = bot.y - bot.r * Math.sin(bot.theta);
+  // ctx.lineTo(x, y);
   ctx.stroke();
   if (bot.r == bots[0].r) {
-    ctx.fillStyle = "rgba(255,0,0,.5)";
+    ctx.fillStyle = "rgba(255,255,255,.5)";
     ctx.fill();
     var img = document.getElementById("plane");
-  ctx.drawImage(img, bots[0].x-bots[0].r, bots[0].y-bots[0].r,2*bots[0].r,2*bots[0].r);
+  ctx.drawImage(img, bots[0].x - bots[0].r, bots[0].y - bots[0].r, 3.5*bots[0].r, 2.5*bots[0].r);
   }
 }
 
